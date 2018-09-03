@@ -27,7 +27,7 @@ public class MyAPP extends Application {
         SophixManager.getInstance().setContext(this)
                 .setAppVersion(BuildConfig.VERSION_NAME)
 //                .setHost("${YourDomain}", false) // 需要指定域名
-                .setEnableDebug(true)
+                .setEnableDebug(!BuildConfig.DEBUG)
                 .setPatchLoadStatusStub(new PatchLoadStatusListener() {
                     @Override
                     public void onLoad(final int mode, final int code, final String info, final int handlePatchVersion) {
