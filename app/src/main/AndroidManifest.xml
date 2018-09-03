@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zhenchao.myapplication">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:name=".MyAPP"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".BuglyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="25052756-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="8dfeac39a5a2caba3ecdb8030a52f05f" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjJvUN1noZDvyNkMlXj+EWgvhFISz7oispDdSQDkCqdaagZPf4Tr0kTOjKUwJjXSNmZ7y0g7YRTJ2SYK8p69GXXmk8h2+3s51D5dNZTo+VZyRAZNMzn1O++3y4Zf01DrBtt8UbKwFrljWjIR84F5G1qkcS19VGypErhnzip85PrDwv0uQKyUwvlpR+vEgcSyn2FcSCsRuyTpYiyNnfsywkEdhlTWDjdewx9SA7hNKBC5e2Gv0G7CZ+SfATMMPn5TNkryEQzgaal6LcPBEXaI7US0nQhscpnZzV/bel9hIaLcN5KOSSWrhoN4MwqTpZAM3qQnQ3OSddVAoV/A30XZTVAgMBAAECggEANriRRpPiHdd984lVTo4OY7uHw7/t03Q/36Qo4Cw3mjSdr3xOAzV9kNhO19VhnqwVfHpcu3rVrRWyX+8XsQrMIGXlDA0s9kNDAwvpiDGmTOjsKsDmaZENyKeW3E4w0APePt59OLCC6G/YC5/HVcvp7jFvZy2G9hho+l1AM9EujF/h6W/VPIX5CwmRp4ISIesdt4VnF83FZsKWFT3MC0BGE16unyo5oooeMKwSFfLVDrdrWVzkOwFbxuGjO4SExzXHmWhta6I2D9EXFZz9CN7nzHWlBcGTcroVEnvosEIrm8xzk2GGilQhEu7tcn3v56lYef5nj6SZJlGHa+AOxu46/QKBgQDaKD4UuCUhF0oA2+kpOBzXrmLr8IThR6GXP3TYPHvlEc+7PSiVqjzQEV03BW4Oe/D7gyGHQD98L9Ppfoa/bsiSh02XETPIT73mHxOXEQJakqyfSqVXfdn8kWTV1VAydiPyY5GvAXhEwnpBX6GDII3WLPmdLWkQKOA3V3N8GoHYXwKBgQC/dBgOo+hXA3HlOt82vkrQE8oD5K13VTwe0Bbz2P7S2BxJUmMXxzgZi1RvNvyVoDeS9FNXGcDQ7FjEwNqCfZPa4pMzjtidDB8C5oCHGAtUuOivZe1w+MmUZ8IJ3XjohwDMTLNKKJVEJw+mrmmZaQv0Ggy29qoOS92Qacbh075vSwKBgFil96wls/jBZPH6asG0Kow+MbZcczK0D+bNA2cHFPVdioM0c/R1S+bk13MPQsyh8qfRfmNeaS3GpZ8BKjJKCzj3wEC93cPtG2aShDxjzggOCBVmmM93tYfbcRUvbDpFJZBOg5mQyFVwjYtZF+GX7er1Na14EXRel9YFNEle4BqTAoGBALsov7fYLfKaMIZ59enrPvGI1uzVaWqGDX7FyBpboEj38TcQbkS5gTMfjMwoAeY3uPxVEv/L8j2LPwAg07vLDXZmFqbJVyK3zb0lHrJyI+mP1hBZYTQWUeFdSUghlOgjyfjuZjrxz3HPibJVQHAzS/c2XAWkvvu42IErlrv/JmRfAoGAUNIyBe0HVi88e9DFkBceqD71RXFUDaQjutoGcqTfFClH2yiQeJ62w7eXU8dw4JtZ4faU2WkyOtHonrX80KtUYiXOXV4cXpiPEomDTLuMADJY9Ebr0MyZW3xAwvTBUH2WNuqu4VtzF9lQRvhouXP6DF+i7xBAdK9PYTs5N2k8xrg=" />
+
+    </application>
+
+</manifest>
